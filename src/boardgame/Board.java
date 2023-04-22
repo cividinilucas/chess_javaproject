@@ -24,4 +24,15 @@ public class Board {
     public void setColums(Integer colums) {
         this.colums = colums;
     }
+
+    public Piece pieace(int row, int column){
+        return pieces[row][column];
+    }
+
+    public Piece pieace(Position position){
+        return pieces[position.getRow()][position.getColumn()];
+    }
+
+
+
 }
