@@ -16,4 +16,8 @@ public class Rook extends ChessPiece {
         //R = ROOK (piece name);
     }
 
+    @Override
+    public boolean[][] possibleMoves() {
+        return new boolean[0][];
+    }
 }
