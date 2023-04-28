@@ -45,8 +45,15 @@ public class ChessMatch {
             throw new ChessException("There is no piece in the source position");
         }
         if(!board.piece(position).isThereAnyPossibleMove()){
-            throw new ChessException("There is no possible  moves for the chosen piece!"); 
+            throw new ChessException("There is no possible  moves for the chosen piece!");
         }
+    }
+
+    private void validadeTargetPosition(Position source, Position target){
+        if(board.piece(source).possibleMove(target)){
+            throw new ChessException("The chosen piece cant move to the target position");
+        }
+
     }
 
     private void placeNewPiece(char column, int row, ChessPiece piece){
