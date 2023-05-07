@@ -15,7 +15,7 @@ public class Main {
         ChessMatch chessMatch = new ChessMatch();
         List<ChessPiece> captured = new ArrayList<>();
 
-        while (true) {
+        while (!chessMatch.getCheckMate()) {
             try {
                 {
                     UI.clearScreen();
@@ -46,5 +46,8 @@ public class Main {
                 input.nextLine();
             }
         }
+        //se acontecer checkMate, o jogo encerra mostrando o tabuleiro e pecas capturadas para ter nocao de como acabou a partida.
+        UI.clearScreen();
+        UI.printMatch(chessMatch, captured);
     }
 }
