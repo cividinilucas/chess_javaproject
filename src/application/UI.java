@@ -74,6 +74,7 @@ public class UI {
                 System.out.println("CHECK!");
             }
         }
+        //Se esta em check mate, deve declarar o jogador que venceu a partida
         else{
             System.out.println("CHECKMATE!");
             System.out.println("Winner: " + chessMatch.getCurrentPlayer());
